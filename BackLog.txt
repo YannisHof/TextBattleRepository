@@ -1,82 +1,25 @@
-﻿-User-Interface:
-	-Maus:
-	-Eingabefeld:
-		- Mauslose-Steuerung
-	-HUD:
-		- Lebensleiste
-		- Energy/Mana/Aktionsbalken
-		- Itemsliste + Commands
-		- Eventanzeige
-		- Rundenzähler - Timer
-		- Rundencountdown
-		- Spielfeld
-		- Menü-Buttons
-		- Koordinaten
--Netzwerkadapter:
-	-TCP Adapter:
--Kampf-System:
-	- Vision-System (Fog-Of-War)
-	- Geld
-	- Skills:
-		- Heilzauber
-		- Feurball
-		- Meteoritenschlag
-		- Remote Vision
-		- Schweben
-		- Chainattack
-		- Flying
-		- Buffs
-	- Crowd Control
-	- Mehrer Ebenen
-	- Terrain:
-		- Berg
-		- Wald
-		- Wasser
-		- Loch
-		- Stachel
-		- Höhle
-		- Dörfer:
-			- Handeln
-			- Einnehmen (MoT)
-			- Verstecken
-		- Schatztruhe
-		- Festung
-		- Heilfeld
-		- Brand
-		- Magma/Lava
-		- Nebel
-	- Levelsystem
--Mobs:
-	- Seltenes Loot-Monster
-	- Geier (Klaut Items vom Boden)
-	- Goblins (Schwach Wenig Exp )
--Items:
-	- Health-Items
-	- Temporäre Stat-booster
-	- Vision-Booster
-	- Kamikazebombe
-	- Speedboots
-	- Fallen
-	- Platzierbare Vision
-	- Granaten:
-		- Explosion
-		- Gift
-		- Brand 
-		- Rauch
-	- Waffen:
-		- Stichwaffe (1 Feld Vorne):
-			- Plus ein Schritt nach vorne
-			- Debuffs (z.B Gift)
-		- Schusswaffe (3-X Felder Vorne):
-			- Penetrating
-			- Debuffs
-		- Hiebwaffe (1 Feld Vorne + Beide Diagonale)
-			- Verschiebt Ziel
--Events:
-	- Zufällige Meteoritenschläge
-	- Heilbereich
-	- Traveling-Merchant
-	- Fog-Of-War
-	- Giftwolke
-	- Mob-Increase
-	- Boss-Mob erscheint
+User-Interface
+	Maus
+	komplett keine Maus
+	Eingabefeld
+	HUD
+		Leben
+		Befehle
+		Items
+		Mana?
+		Event Warnung
+		Zeitanzeige
+		Ranking/Gegner Name
+Netzwerkadapter
+	TCP Adapter
+Kampf-System
+Minions
+Items
+
+
+Linda Items:
+
+Map
+	verkleinerung
+	events
+
