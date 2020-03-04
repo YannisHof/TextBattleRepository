@@ -1,0 +1,42 @@
+v1:	Sprint 04.03.2020
+Product Owner für dieses Inkrement: Zochrab
+
+- class Spieler							15SP	(Lukas, Simon)
+	- int posx
+	- int posy
+	- static Kampfsystem
+	- angriff(enum richtung)
+	- bewege(enum richtung)
+
+
+
+
+
+- (HUD)									25SP	(Joshua, Philip)
+	- static Eingabesystem
+	- spielbrettAusgeben()
+	- eingabeAnzeige()
+- class Spielbrett
+	- Zelle[int][int] gitter
+- class Zelle
+	- enum material
+
+
+
+
+
+
+- class Eingabesystem					35SP	(Yannis, Michael)
+	- uebersetzer(String eingabe)
+	- aktionsliste
+	- String aktuelleEingabe
+
+
+
+
+
+
+- class Kampfsystem (auch Movement)		25SP	(Linda, Chantal)
+	- angriff(Spieler, enum richtung)
+	- bewege(Spieler, enum richtung)
+	- static Spielbrett

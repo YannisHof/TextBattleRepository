@@ -1,6 +1,7 @@
 ﻿-User-Interface:
-	-Maus:
+	//-Maus:
 	-Eingabefeld:
+		- Pfeiltasten?
 		- Mauslose-Steuerung
 	-HUD:
 		- Lebensleiste
@@ -13,13 +14,15 @@
 		- Menü-Buttons
 		- Koordinaten
 -Netzwerkadapter:
-	-TCP Adapter:
--Kampf-System:
+	-TCP Adapter
+	- 1vs1
+-Kampf-System:	
+	- Aktionsliste
 	- Vision-System (Fog-Of-War)
 	- Geld
 	- Skills:
 		- Heilzauber
-		- Feurball
+		- Feuerball
 		- Meteoritenschlag
 		- Remote Vision
 		- Schweben
@@ -27,7 +30,7 @@
 		- Flying
 		- Buffs
 	- Crowd Control
-	- Mehrer Ebenen
+	- Mehrere Ebenen
 	- Terrain:
 		- Berg
 		- Wald
@@ -80,3 +83,8 @@
 	- Giftwolke
 	- Mob-Increase
 	- Boss-Mob erscheint
+- Soundsystem:
+	- Kämpfe
+	- Bewegungen
+	- Hintergrundsystem
+- Grafik
