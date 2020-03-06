@@ -1,0 +1,6 @@
+
+
+class Eingabesystem
+{
+  String aktuelleEingabe;
+}

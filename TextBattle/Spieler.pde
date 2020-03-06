@@ -9,7 +9,7 @@ class Spieler{
    
  }
  
- public void bewege(Richtung richtung){
+ public void greifeAn(Richtung richtung){
    
  }
   
