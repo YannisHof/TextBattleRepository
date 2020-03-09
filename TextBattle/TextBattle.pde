@@ -1,6 +1,7 @@
 
 static final int fieldSizeX = 16, fieldSizeY = 16;
 static final int anzSpieler = 2;
+static final int maxAktionen = 7;
 static Eingabesystem eingabesystem;
 static Spielbrett spielbrett;
 
