@@ -3,15 +3,19 @@
 class Eingabesystem
 {
 
-  private Aktion[] aktionsListe;  
+  private Aktion[] aktionsListe;
+  public int anzAktionen;
+  public String aktuelleEingabe;
   public Eingabesystem()
   {
     aktionsListe = new Aktion[maxAktionen];
+    anzAktionen = 0;
+    aktuelleEingabe = "";
   }
-  public String aktuelleEingabe="";
   void uebersetzer(String eingabe) {
+    if (maxAktionen <= anzAktionen) return;
     String[] strs = eingabe.split(" ");
-    int aktionsArt;
+    int aktionsArt = 0;
     if (strs.length>0) {
       switch(strs[0]) {
       case "angriff":
@@ -32,84 +36,110 @@ class Eingabesystem
       case "oben":
         switch (aktionsArt) {
         case 0:
-          aktionsListe[aktionsListe.length()] = Aktion.TIPPFEHLER;
+          aktionsListe[anzAktionen] = Aktion.TIPPFEHLER;
+          anzAktionen++;
           break;
         case 1:
-          aktionsListe[aktionsListe.length()] = Aktion.ANGRIFFOBEN;
+          aktionsListe[anzAktionen] = Aktion.ANGRIFFOBEN;
+          anzAktionen++;
           break;
         case 2:
-          aktionsListe[aktionsListe.length()] = Aktion.BEWGEOBEN;
+          aktionsListe[anzAktionen] = Aktion.BEWEGEOBEN;
+          anzAktionen++;
           break;
         default:
-          aktionsListe[aktionsListe.length()] = Aktion.TIPPFEHLER;
+          aktionsListe[anzAktionen] = Aktion.TIPPFEHLER;
+          anzAktionen++;
           break;
         }
+        break;
       case "unten":
         switch (aktionsArt) {
         case 0:
-          aktionsListe[aktionsListe.length()] = Aktion.TIPPFEHLER;
+          aktionsListe[anzAktionen] = Aktion.TIPPFEHLER;
+          anzAktionen++;
           break;
         case 1:
-          aktionsListe[aktionsListe.length()] = Aktion.ANGRIFFUNTEN;
+          aktionsListe[anzAktionen] = Aktion.ANGRIFFUNTEN;
+          anzAktionen++;
           break;
         case 2:
-          aktionsListe[aktionsListe.length()] = Aktion.BEWGEUNTEN;
+          aktionsListe[anzAktionen] = Aktion.BEWEGEUNTEN;
+          anzAktionen++;
           break;
         default:
-          aktionsListe[aktionsListe.length()] = Aktion.TIPPFEHLER;
+          aktionsListe[anzAktionen] = Aktion.TIPPFEHLER;
+          anzAktionen++;
           break;
         }
+        break;
       case "rechts":
         switch (aktionsArt) {
         case 0:
-          aktionsListe[aktionsListe.length()] = Aktion.TIPPFEHLER;
+          aktionsListe[anzAktionen] = Aktion.TIPPFEHLER;
+          anzAktionen++;
           break;
         case 1:
-          aktionsListe[aktionsListe.length()] = Aktion.ANGRIFFRECHTS;
+          aktionsListe[anzAktionen] = Aktion.ANGRIFFRECHTS;
+          anzAktionen++;
           break;
         case 2:
-          aktionsListe[aktionsListe.length()] = Aktion.BEWGERECHTS;
+          aktionsListe[anzAktionen] = Aktion.BEWGERECHTS;
+          anzAktionen++;
           break;
         default:
-          aktionsListe[aktionsListe.length()] = Aktion.TIPPFEHLER;
+          aktionsListe[anzAktionen] = Aktion.TIPPFEHLER;
+          anzAktionen++;
           break;
         }
+        break;
       case "links":
         switch (aktionsArt) {
         case 0:
-          aktionsListe[aktionsListe.length()] = Aktion.TIPPFEHLER;
+          aktionsListe[anzAktionen] = Aktion.TIPPFEHLER;
+          anzAktionen++;
           break;
         case 1:
-          aktionsListe[aktionsListe.length()] = Aktion.ANGRIFFLINKS;
+          aktionsListe[anzAktionen] = Aktion.ANGRIFFLINKS;
+          anzAktionen++;
           break;
         case 2:
-          aktionsListe[aktionsListe.length()] = Aktion.BEWGELINKS;
+          aktionsListe[anzAktionen] = Aktion.BEWEGELINKS;
+          anzAktionen++;
           break;
         default:
-          aktionsListe[aktionsListe.length()] = Aktion.TIPPFEHLER;
+          aktionsListe[anzAktionen] = Aktion.TIPPFEHLER;
+          anzAktionen++;
           break;
         }
+        break;
       default:
-        aktionsListe[aktionsListe.length()] = Aktion.TIPPFEHLER;
+        aktionsListe[anzAktionen] = Aktion.TIPPFEHLER;
+        anzAktionen++;
         break;
       }
     }
   }
 }
 void keyPressed() {
-  if (key != CODED) 
+  if (key != CODED && key != BACKSPACE && key != RETURN && key != ENTER) 
   {
     eingabesystem.aktuelleEingabe += key;
+    print("\n\n\n\n\n");
     eingabeAnzeigen();
   }
 
   //println (e.text1);
   if (key==BACKSPACE) {
     if (eingabesystem.aktuelleEingabe.length()>0) {
-      eingabesystem.aktuelleEingabe = eingabesystem.aktuelleEingabe.substring(0, eingabesystem.aktuelleEingabe.length()-2);
+      eingabesystem.aktuelleEingabe = eingabesystem.aktuelleEingabe.substring(0, eingabesystem.aktuelleEingabe.length()-1);
+      print("\n\n\n\n\n");
+      eingabeAnzeigen();
     }
   } else if (key==RETURN || key==ENTER) {
-    uebersetzer(aktuelleEingabe);
+    eingabesystem.uebersetzer(eingabesystem.aktuelleEingabe);
     eingabesystem.aktuelleEingabe="";
+    print("\n\n\n\n\n");
+    eingabeAnzeigen();
   }
 }

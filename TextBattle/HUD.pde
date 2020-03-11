@@ -13,7 +13,7 @@ void spielbrettAusgeben()
     {
       for(int s = 0; s < anzSpieler; s++)
       {
-        if((spielbrett.spieler[s].posx == i)&&(spielbrett.spieler[s].posy == j))
+        if((spielbrett.spieler[s].get_pos_x() == i)&&(spielbrett.spieler[s].get_pos_y() == j))
         {
           print(" > P"+s+"< ");
           isPlayer = true;
@@ -32,5 +32,5 @@ void spielbrettAusgeben()
 
 void eingabeAnzeigen()
 {
-  print("Aktuelle Eingabe: >>"+eingabesystem.aktuelleEingabe+"|");
+  println("Aktuelle Eingabe: >>"+eingabesystem.aktuelleEingabe+"|");
 }

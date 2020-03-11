@@ -16,7 +16,7 @@ class Spielbrett
     spieler = new Spieler[anzSpieler];
     for(int s = 0; s < anzSpieler; s++)
       {
-       spieler[s] = new Spieler();
+       spieler[s] = new Spieler(round(random(0,fieldSizeX)),round(random(0,fieldSizeY)), 10);
       }
   }
 }
